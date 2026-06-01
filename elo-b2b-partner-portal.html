@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="icon" type="image/svg+xml" href="assets/logo_jccbr.svg"/>
+    <title>Case Study: Elo B2B Partner Portal - Julio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        html, body, *, *::before, *::after {
+            cursor: none !important;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            -webkit-font-smoothing: antialiased;
+        }
+        .brutalist-border {
+            border: 1px solid #2A2A2A;
+        }
+        .accent-line {
+            width: 2px;
+            background-color: #9B0000;
+        }
+        .text-accent {
+            color: #9B0000;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#e2e2e2",
+                        "inverse-on-surface": "#313030",
+                        "surface-dim": "#131313",
+                        "primary-container": "#e2e2e2",
+                        "surface-container": "#201f1f",
+                        "secondary-fixed": "#ffdad4",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e5e2e1",
+                        "border-subtle": "#2A2A2A",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed": "#1f1b19",
+                        "on-primary-fixed-variant": "#454747",
+                        "tertiary-container": "#eae1dd",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-fixed": "#eae1dd",
+                        "surface": "#131313",
+                        "on-tertiary": "#342f2d",
+                        "outline": "#8e9192",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-fixed": "#410000",
+                        "surface-variant": "#353534",
+                        "error-container": "#93000a",
+                        "surface-container-highest": "#353534",
+                        "surface-tint": "#c6c6c7",
+                        "text-muted": "#888888",
+                        "tertiary-fixed-dim": "#cec5c1",
+                        "on-secondary": "#690000",
+                        "secondary-container": "#9B0000",
+                        "surface-bright": "#3a3939",
+                        "outline-variant": "#444748",
+                        "on-tertiary-container": "#6a6360",
+                        "surface-elevated": "#1A1A1A",
+                        "primary": "#ffffff",
+                        "inverse-primary": "#5d5f5f",
+                        "secondary": "#ffb4a8",
+                        "secondary-fixed-dim": "#ffb4a8",
+                        "on-secondary-fixed-variant": "#930000",
+                        "on-secondary-container": "#ffd7d1",
+                        "on-primary": "#2f3131",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error-container": "#ffdad6",
+                        "background": "#111111",
+                        "tertiary": "#ffffff",
+                        "surface-container-high": "#2a2a2a",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#4b4643",
+                        "on-background": "#f1f1f1",
+                        "on-primary-container": "#636565",
+                        "on-primary-fixed": "#1a1c1c",
+                        "on-surface-variant": "#c4c7c8"
+                    },
+                    "spacing": {
+                        "stack-lg": "48px",
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "margin-desktop": "80px",
+                        "stack-md": "24px",
+                        "margin-mobile": "24px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "display-2xl": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["20px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                        "display-2xl": ["120px", { "lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background selection:bg-secondary-container selection:text-white overflow-x-hidden font-body-md">
+    <!-- TopAppBar -->
+    <nav class="fixed top-0 w-full z-50 bg-background dark:bg-background border-b border-border-subtle">
+        <div class="flex justify-between items-center px-margin-desktop py-stack-md max-w-[1440px] mx-auto w-full">
+            <a class="shrink-0 transition-opacity hover:opacity-80 flex items-center" href="./index.html">
+                <img src="assets/logo_jccbr.svg" alt="JCCBR Logo" class="h-8 w-auto">
+            </a>
+            <div class="hidden md:flex gap-8 items-center absolute left-1/2 -translate-x-1/2">
+                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer" href="./index.html#work">Work</a>
+                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer" href="./index.html#clients">Clients</a>
+                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer" href="./index.html#about">About Me</a>
+            </div>
+            <div class="flex items-center">
+                <a class="inline-flex items-center bg-accent text-primary font-label-caps text-label-caps px-6 py-3 uppercase font-bold rounded-full hover:bg-primary hover:text-background transition-colors duration-300" href="./index.html#contact">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Project Hero Image -->
+        <section class="w-full h-[50vh] pt-[81px]">
+            <img alt="Elo B2B Partner Portal Hero" class="w-full h-full object-cover" src="case1/image 15.png"/>
+        </section>
+
+        <!-- Hero Title Section -->
+        <section class="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto py-stack-lg border-b border-outline-variant">
+            <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary uppercase">
+                Elo B2B <br class="hidden md:block"/> Partner Portal
+            </h1>
+        </section>
+
+        <section class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg border-b border-outline-variant">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <p class="font-label-caps text-label-caps text-text-muted uppercase mb-2">Role</p>
+                    <p class="font-body-md text-primary">Solo Product Designer</p>
+                </div>
+                <div>
+                    <p class="font-label-caps text-label-caps text-text-muted uppercase mb-2">Timeline</p>
+                    <p class="font-body-md text-primary">1 Month (MVP-Paced)</p>
+                </div>
+                <div>
+                    <p class="font-label-caps text-label-caps text-text-muted uppercase mb-2">Platform</p>
+                    <p class="font-body-md text-primary">Web App (Desktop)</p>
+                </div>
+                <div>
+                    <p class="font-label-caps text-label-caps text-text-muted uppercase mb-2">Tools</p>
+                    <p class="font-body-md text-primary">Figma, Miro, Gemini, Stitch, Next.js</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study Sections -->
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+            <!-- The Context -->
+            <section class="py-section-gap flex flex-col md:flex-row gap-gutter">
+                <div class="md:w-1/3 flex gap-6">
+                    <div class="accent-line h-12 flex-shrink-0"></div>
+                    <h2 class="font-headline-md text-headline-md text-primary uppercase">The Context</h2>
+                </div>
+                <div class="md:w-2/3 space-y-6">
+                    <p class="font-body-lg text-body-lg text-text-muted leading-relaxed">
+                        Elo’s B2B Partner Portal is the central hub for major corporate partners. Recognizing growing operational friction, I proactively investigated user and technical pain points. I pitched the redesign initiative to leadership, taking full ownership of the project to evolve the portal from a legacy system into a scalable, modern platform.
+                    </p>
+                    <p class="font-body-lg text-body-lg text-text-muted leading-relaxed border-t border-outline-variant pt-6">
+                        <strong>The Goal:</strong> Standardize visual components on a new Design System bridging UX and Engineering, and restructure the Information Architecture (IA), all executed autonomously under a strict 30-day deadline.
+                    </p>
+                </div>
+            </section>
+
+            <!-- The Challenge -->
+            <section class="py-section-gap flex flex-col md:flex-row gap-gutter border-t border-outline-variant">
+                <div class="md:w-1/3 flex gap-6">
+                    <div class="accent-line h-12 flex-shrink-0"></div>
+                    <h2 class="font-headline-md text-headline-md text-primary uppercase">The Challenge</h2>
+                </div>
+                <div class="md:w-2/3 space-y-6">
+                    <div class="flex items-start gap-4">
+                        <span class="text-accent font-bold">01.</span>
+                        <div>
+                            <h4 class="font-body-md text-primary font-bold mb-1">Design System Fragmentation</h4>
+                            <p class="font-body-md text-body-md text-text-muted">The portal was trapped between a legacy system ("Orb") and a new brand identity ("Eloquent"). The transition was incomplete, creating a "Frankenstein" interface lacking standardized components.</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-outline-variant pt-6 flex items-start gap-4">
+                        <span class="text-accent font-bold">02.</span>
+                        <div>
+                            <h4 class="font-body-md text-primary font-bold mb-1">Development Friction</h4>
+                            <p class="font-body-md text-body-md text-text-muted">Without a centralized component library, engineers were forced to build undocumented "one-off" components, leading to massive technical debt and redundant features.</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-outline-variant pt-6 flex items-start gap-4">
+                        <span class="text-accent font-bold">03.</span>
+                        <div>
+                            <h4 class="font-body-md text-primary font-bold mb-1">Broken Information Architecture (IA)</h4>
+                            <p class="font-body-md text-body-md text-text-muted">With over 30 complex operational workflows and no global search, features were poorly categorized, creating an immense cognitive load for partners trying to navigate the platform.</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-outline-variant pt-6 flex items-start gap-4">
+                        <span class="text-accent font-bold">04.</span>
+                        <div>
+                            <h4 class="font-body-md text-primary font-bold mb-1">High Operational Overhead</h4>
+                            <p class="font-body-md text-body-md text-text-muted">The navigation friction directly triggered an escalating volume of support tickets. Partners were constantly relying on the support team simply to locate basic tools, draining company resources.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Solution -->
+            <section class="py-section-gap flex flex-col md:flex-row gap-gutter border-t border-outline-variant">
+                <div class="md:w-1/3 flex gap-6">
+                    <div class="accent-line h-12 flex-shrink-0"></div>
+                    <h2 class="font-headline-md text-headline-md text-primary uppercase">The Solution</h2>
+                </div>
+                <div class="md:w-2/3">
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <span class="text-accent font-bold">01.</span>
+                            <div>
+                                <h4 class="font-body-md text-primary font-bold mb-1">Validation &amp; Strategic Prioritization</h4>
+                                <p class="font-body-md text-body-md text-text-muted">Facilitated a Value vs. Effort Matrix session with Engineering and PMs to map out technical debt's impact. We prioritized core access flows (Auth0, IA) and strategically deferred complex legacy services to the future roadmap, ensuring high-impact delivery within our 30-day timeline.</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-outline-variant pt-6 flex items-start gap-4">
+                            <span class="text-accent font-bold">02.</span>
+                            <div>
+                                <h4 class="font-body-md text-primary font-bold mb-1">Visual Translation with Stitch &amp; Metaprompting</h4>
+                                <p class="font-body-md text-body-md text-text-muted">Implemented an AI-assisted UI generation workflow using Google Stitch and Gemini. By feeding the Design System assets as references and legacy screenshots as blueprints, I bypassed traditional ideation bottlenecks, rapidly generating modern side-sheet structures and clean responsive concepts.</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-outline-variant pt-6 flex items-start gap-4">
+                            <span class="text-accent font-bold">03.</span>
+                            <div>
+                                <h4 class="font-body-md text-primary font-bold mb-1">AI-Driven Information Architecture (IA)</h4>
+                                <p class="font-body-md text-body-md text-text-muted">Engineered a custom Gemini AI Agent, feeding it feature lists and quantitative usage data. The AI analyzed behavioral metrics to recommend intuitive B2B groupings (billing, management, products), allowing us to rapidly construct a scalable and clear navigation structure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Results -->
+            <section class="py-section-gap border-t border-outline-variant">
+                <div class="flex flex-col md:flex-row gap-gutter mb-stack-lg">
+                    <div class="md:w-1/3 flex gap-6">
+                        <div class="accent-line h-12 flex-shrink-0"></div>
+                        <h2 class="font-headline-md text-headline-md text-primary uppercase">The Results</h2>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="font-body-lg text-body-lg text-text-muted leading-relaxed mb-stack-lg">
+                            The redesigned B2B Partner Portal secured 100% cross-functional approval, successfully resolving legacy visual debt and visual-to-development friction. Figma component libraries were standardized with auto-layout and design tokens, laying down a highly repeatable design-to-code workflow for all future feature rollouts.
+                        </p>
+                        <!-- Big Numbers -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+                            <div>
+                                <h4 class="font-display-2xl text-[80px] leading-none text-accent font-black mb-2">+80</h4>
+                                <p class="font-label-caps text-label-caps text-text-muted uppercase tracking-widest font-bold">Screens Designed</p>
+                            </div>
+                            <div>
+                                <h4 class="font-display-2xl text-[80px] leading-none text-primary font-black mb-2">30 Days</h4>
+                                <p class="font-label-caps text-label-caps text-text-muted uppercase tracking-widest font-bold font-bold">MVP Delivery Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Visual Results Grid -->
+        <section class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap space-y-gutter">
+            <div class="w-full">
+                <img alt="Elo B2B Redesigned Desktop Portal Dashboard" class="w-full aspect-[21/9] object-cover brutalist-border grayscale hover:grayscale-0 transition-all duration-500" src="case1/image 8.png"/>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <img alt="Value vs. Effort Matrix Prioritization" class="w-full aspect-video object-cover brutalist-border grayscale hover:grayscale-0 transition-all duration-500" src="case1/image 1.png"/>
+                <img alt="Google Stitch and Gemini UI Translation Workflow" class="w-full aspect-video object-cover brutalist-border grayscale hover:grayscale-0 transition-all duration-500" src="case1/image 5.png"/>
+                <img alt="Elo High-Fidelity Portal Dashboard Screen" class="w-full aspect-video object-cover brutalist-border grayscale hover:grayscale-0 transition-all duration-500" src="case1/image 10.png"/>
+                <img alt="Eloquent Design System Auto-Layout Component Library in Figma" class="w-full aspect-video object-cover brutalist-border grayscale hover:grayscale-0 transition-all duration-500" src="case1/image 13.png"/>
+            </div>
+        </section>
+
+        <!-- Next Project Navigation -->
+        <section class="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto mb-stack-lg">
+            <a class="group flex flex-col items-center justify-center py-stack-lg brutalist-border hover:bg-primary hover:text-on-primary transition-all duration-500" href="./index.html#work">
+                <span class="font-label-caps text-label-caps text-text-muted uppercase group-hover:text-on-primary mb-2">Back to Projects</span>
+                <span class="font-headline-md text-headline-md text-primary group-hover:text-on-primary transition-colors">Selected Work Overview</span>
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-background dark:bg-background border-t border-border-subtle">
+        <div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-stack-lg gap-stack-md max-w-[1440px] mx-auto">
+            <div class="shrink-0">
+                <img src="assets/logo_jccbr.svg" alt="JCCBR Logo" class="h-8 w-auto">
+            </div>
+            <div class="font-label-caps text-label-caps text-text-muted uppercase">
+                © 2026 JULIO. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = { threshold: 0.1 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('main > section, .max-w-\\[1440px\\] > section').forEach(section => {
+                section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+    </script>
+    <!-- Custom Cursor Element -->
+    <div id="custom-cursor" class="fixed top-0 left-0 w-4 h-4 bg-white rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out hidden md:block" style="mix-blend-mode: difference;"></div>
+
+    <script>
+        const cursor = document.getElementById('custom-cursor');
+        
+        if (cursor) {
+            // Update cursor position
+            window.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+
+            // Handle hover scaling on links, buttons, and logos
+            const interactives = document.querySelectorAll('a, button, img, [role="button"]');
+            interactives.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.classList.remove('w-4', 'h-4');
+                    cursor.classList.add('w-12', 'h-12');
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('w-12', 'h-12');
+                    cursor.classList.add('w-4', 'h-4');
+                });
+            });
+
+            // Hide custom cursor when mouse leaves the document window
+            document.addEventListener('mouseleave', () => {
+                cursor.style.opacity = '0';
+            });
+            document.addEventListener('mouseenter', () => {
+                cursor.style.opacity = '1';
+            });
+        }
+    </script>
+</body>
+</html>

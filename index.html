@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="icon" type="image/svg+xml" href="assets/logo_jccbr.svg">
+    <title>Julio - Product Designer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#e2e2e2",
+                        "inverse-on-surface": "#313030",
+                        "surface-dim": "#131313",
+                        "primary-container": "#e2e2e2",
+                        "surface-container": "#201f1f",
+                        "secondary-fixed": "#ffdad4",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e5e2e1",
+                        "border-subtle": "#2A2A2A",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed": "#1f1b19",
+                        "on-primary-fixed-variant": "#454747",
+                        "tertiary-container": "#eae1dd",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-fixed": "#eae1dd",
+                        "surface": "#131313",
+                        "on-tertiary": "#342f2d",
+                        "outline": "#8e9192",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-fixed": "#410000",
+                        "surface-variant": "#353534",
+                        "error-container": "#93000a",
+                        "surface-container-highest": "#353534",
+                        "surface-tint": "#c6c6c7",
+                        "text-muted": "#888888",
+                        "tertiary-fixed-dim": "#cec5c1",
+                        "on-secondary": "#690000",
+                        "secondary-container": "#9B0000",
+                        "surface-bright": "#3a3939",
+                        "outline-variant": "#444748",
+                        "on-tertiary-container": "#6a6360",
+                        "surface-elevated": "#1A1A1A",
+                        "primary": "#ffffff",
+                        "inverse-primary": "#5d5f5f",
+                        "secondary": "#ffb4a8",
+                        "secondary-fixed-dim": "#ffb4a8",
+                        "on-secondary-fixed-variant": "#930000",
+                        "on-secondary-container": "#ffd7d1",
+                        "on-primary": "#2f3131",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error-container": "#ffdad6",
+                        "background": "#111111",
+                        "tertiary": "#ffffff",
+                        "surface-container-high": "#2a2a2a",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#4b4643",
+                        "on-background": "#f1f1f1",
+                        "on-primary-container": "#636565",
+                        "on-primary-fixed": "#1a1c1c",
+                        "on-surface-variant": "#c4c7c8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0",
+                        "lg": "8px",
+                        "xl": "12px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "48px",
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "margin-desktop": "80px",
+                        "stack-md": "24px",
+                        "margin-mobile": "24px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "display-2xl": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["20px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                        "display-2xl": ["120px", { "lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html,
+        body,
+        *,
+        *::before,
+        *::after {
+            cursor: none !important;
+        }
+
+        body {
+            background-color: #111111;
+            color: #f1f1f1;
+        }
+
+        .text-accent {
+            color: #9B0000;
+        }
+
+        .bg-accent {
+            background-color: #9B0000;
+        }
+
+        .border-accent {
+            border-color: #9B0000;
+        }
+
+        .hover-accent-border:hover {
+            border-color: #9B0000;
+        }
+
+        .hover-accent-text:hover {
+            color: #9B0000;
+        }
+
+        .group:hover .group-hover\:text-accent {
+            color: #9B0000;
+        }
+    </style>
+</head>
+
+<body class="font-body-md text-on-background selection:bg-secondary-container selection:text-on-secondary-container">
+    <!-- TopNavBar Component -->
+    <nav class="fixed top-0 w-full z-50 bg-background dark:bg-background border-b border-border-subtle">
+        <div class="flex justify-between items-center px-margin-desktop py-stack-md max-w-[1440px] mx-auto w-full">
+            <a class="shrink-0 transition-opacity hover:opacity-80 flex items-center" href="./index.html">
+                <img src="assets/logo_jccbr.svg" alt="JCCBR Logo" class="h-8 w-auto">
+            </a>
+            <div class="hidden md:flex gap-8 items-center absolute left-1/2 -translate-x-1/2">
+                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer"
+                    href="#work">Work</a>
+                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer"
+                    href="#clients">Clients</a>
+                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer"
+                    href="#about">About Me</a>
+            </div>
+            <div class="flex items-center">
+                <a class="inline-flex items-center bg-accent text-primary font-label-caps text-label-caps px-6 py-3 uppercase font-bold rounded-full hover:bg-primary hover:text-background transition-colors duration-300"
+                    href="#contact">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-[1440px] mx-auto">
+        <!-- Hero Section -->
+        <section class="h-screen flex flex-col justify-center items-center px-margin-desktop text-center">
+            <div>
+                <div
+                    class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-border-subtle bg-surface-container-low text-[10px] font-bold font-label-caps uppercase tracking-widest text-primary mb-6">
+                    <span class="relative flex h-2.5 w-2.5">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                    </span>
+                    Available for work
+                </div>
+
+                <h1 class="font-display-2xl text-display-2xl text-primary mb-stack-md tracking-tighter">
+                    JULIO CCBR <br>
+                    DESIGN/DEV
+                </h1>
+
+                <p class="font-body-lg text-xl md:text-2xl text-text-muted max-w-3xl mx-auto leading-relaxed">
+                    Product Designer with +5 years of experience - blending
+                    <br> <span class="text-primary border-b-2 border-accent pb-1"> AI, code, and
+                        research</span> to deliver user centric solutions.
+                </p>
+
+                <div class="mt-16">
+                    <a class="inline-flex items-center justify-center gap-2 border border-primary text-primary font-label-caps text-label-caps px-8 py-4 uppercase font-bold rounded-full hover:bg-primary hover:text-background transition-colors duration-300 cursor-pointer"
+                        href="#work">
+                        See my work <span class="material-symbols-outlined animate-bounce">arrow_downward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Transition Image Section -->
+    <section class="w-full h-[60vh] overflow-hidden mb-section-gap">
+        <img alt="JCCBR Studio" class="w-full h-full object-cover" src="assets/pic.png">
+    </section>
+
+    <main class="max-w-[1440px] mx-auto">
+
+        <!-- Projects Section -->
+        <section class="px-margin-desktop mb-section-gap scroll-mt-24" id="work">
+            <div class="mb-stack-lg">
+                <h2 class="font-display-lg text-display-lg text-primary inline-block relative px-6">
+                    <span class="absolute left-0 top-0 bottom-0 w-1.5 bg-accent"></span>
+                    SELECTED WORK
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <!-- Project Card 1 -->
+                <a class="group block border border-border-subtle hover-accent-border transition-colors duration-300"
+                    href="./elo-b2b-partner-portal.html">
+                    <div class="relative w-full aspect-[1.5] overflow-hidden bg-surface-elevated">
+                        <img alt="Elo B2B Partner Portal Cover"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                            src="case1/image 8.png">
+                    </div>
+                    <div
+                        class="p-stack-md border-t border-border-subtle flex justify-between items-center group-hover:bg-surface-container-low transition-colors duration-300">
+                        <h3 class="font-headline-md text-headline-md text-primary">Elo B2B Partner Portal</h3>
+                        <span
+                            class="material-symbols-outlined text-primary group-hover:text-accent transition-colors duration-300">arrow_outward</span>
+                    </div>
+                </a>
+                <!-- Project Card 2 -->
+                <a class="group block border border-border-subtle hover-accent-border transition-colors duration-300"
+                    href="#">
+                    <div class="relative w-full aspect-[1.5] overflow-hidden bg-surface-elevated">
+                        <img alt=""
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida/ADBb0uj9o2QewBaN22Ycws82SmuVJ1jKRKn_9UUqIyt_xlX-qNpxrV2DbvbalubIsUEoxDWawfV-4tXmfFjzXhpn4ec3U1RtQ-iV-ElOOTLllZ86Stu5oeZYylt80btdRtTCD0DBoTkjcqDaVtEMF7aqxuMpU_pKe8fDfcU-yN0GcIQjoNqmd9DdG9ucDianuiCsvIOjJ3pslop1Viy9s-QmkXUIucPPlUxfGw2k8Gqe21vSqOmFEe3BSehXm55P">
+                    </div>
+                    <div
+                        class="p-stack-md border-t border-border-subtle flex justify-between items-center group-hover:bg-surface-container-low transition-colors duration-300">
+                        <h3 class="font-headline-md text-headline-md text-primary">Logistics Dashboard</h3>
+                        <span
+                            class="material-symbols-outlined text-primary group-hover:text-accent transition-colors duration-300">arrow_outward</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Clients Section -->
+        <section class="px-margin-desktop mb-section-gap text-center scroll-mt-28" id="clients">
+            <h3 class="font-label-caps text-label-caps text-text-muted mb-stack-lg uppercase tracking-widest">OTHER
+                CLIENTS
+            </h3>
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20">
+                <!-- Meta -->
+                <a href="https://www.meta.com/" target="_blank" rel="noopener noreferrer" class="shrink-0">
+                    <img src="assets/meta.png" alt="Meta Logo"
+                        class="h-10 md:h-12 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity duration-300">
+                </a>
+                <!-- Volkswagen -->
+                <a href="https://www.vw.com/" target="_blank" rel="noopener noreferrer" class="shrink-0">
+                    <img src="assets/volkswagen.png" alt="Volkswagen Logo"
+                        class="h-10 md:h-12 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity duration-300">
+                </a>
+                <!-- Decolar -->
+                <a href="https://www.decolar.com/" target="_blank" rel="noopener noreferrer" class="shrink-0">
+                    <img src="assets/decolar.png" alt="Decolar Logo"
+                        class="h-10 md:h-12 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity duration-300">
+                </a>
+                <!-- iFood -->
+                <a href="https://www.ifood.com.br/" target="_blank" rel="noopener noreferrer" class="shrink-0">
+                    <img src="assets/ifood.png" alt="iFood Logo"
+                        class="h-10 md:h-12 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity duration-300">
+                </a>
+                <!-- Elo -->
+                <a href="https://www.elo.com.br/" target="_blank" rel="noopener noreferrer" class="shrink-0">
+                    <img src="assets/elo.png" alt="Elo Logo"
+                        class="h-10 md:h-12 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity duration-300">
+                </a>
+                <!-- Bradesco -->
+                <a href="https://banco.bradesco/" target="_blank" rel="noopener noreferrer" class="shrink-0">
+                    <img src="assets/bradesco.png" alt="Bradesco Logo"
+                        class="h-10 md:h-12 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity duration-300">
+                </a>
+                <!-- Banco do Brasil -->
+                <a href="https://www.bb.com.br/" target="_blank" rel="noopener noreferrer" class="shrink-0">
+                    <img src="assets/bancodobrasil.png" alt="Banco do Brasil Logo"
+                        class="h-10 md:h-12 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity duration-300">
+                </a>
+                <!-- Caixa -->
+                <a href="https://www.caixa.gov.br/" target="_blank" rel="noopener noreferrer" class="shrink-0">
+                    <img src="assets/caixa.png" alt="Caixa Logo"
+                        class="h-10 md:h-12 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity duration-300">
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="px-margin-desktop mb-section-gap scroll-mt-24" id="about">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+                <div class="md:col-span-7">
+                    <h2 class="font-display-lg text-display-lg text-primary mb-stack-md inline-block relative px-6">
+                        <span class="absolute left-0 top-0 bottom-0 w-1.5 bg-accent"></span>
+                        ABOUT ME
+                    </h2>
+                    <p class="font-body-lg text-body-lg text-text-muted mb-stack-md leading-relaxed">
+                        Currently, I am a Product Designer with +5 years of experience—blending AI, code, and research
+                        to drive impact across both agile startup teams and complex enterprise environments. </p>
+                    <p class="font-body-lg text-body-lg text-text-muted mb-stack-lg leading-relaxed">
+                        Rooted in Information Systems, my work goes far beyond the interface. Today, I leverage my
+                        technical foundation to act as a seamless bridge between
+                        developers and business goals, always eager for the next big challenge. </p>
+                    <p class="font-body-lg text-body-lg text-primary font-bold mb-stack-lg leading-relaxed">
+                        Email: julioccbr@gmail.com <br>
+                        Phone: +55 (37) 98811 1622</p>
+                    <div class="flex flex-wrap gap-4 mt-8">
+                        <a class="inline-flex items-center justify-center gap-2 bg-accent text-primary font-label-caps text-label-caps px-8 py-4 uppercase font-bold rounded-full hover:bg-primary hover:text-background min-w-[200px] transition-colors duration-300"
+                            href="#">
+                            LinkedIn <span class="material-symbols-outlined">arrow_outward</span>
+                        </a>
+                        <a class="inline-flex items-center justify-center gap-2 border border-primary text-primary font-label-caps text-label-caps px-8 py-4 uppercase font-bold rounded-full hover:bg-primary hover:text-background min-w-[200px] transition-colors duration-300"
+                            href="#">
+                            Download CV <span class="material-symbols-outlined">download</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:col-span-5 mt-stack-lg md:mt-0">
+                    <img alt="Julio Cesar Cabral"
+                        class="w-full max-w-[360px] mx-auto h-[420px] md:h-[600px] object-cover object-center rounded-full grayscale hover:grayscale-0 transition-all duration-700"
+                        src="assets/photo.png">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="w-full bg-background dark:bg-background border-t border-border-subtle scroll-mt-24" id="contact">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-stack-lg gap-stack-md max-w-[1440px] mx-auto">
+            <div class="shrink-0">
+                <img src="assets/logo_jccbr.svg" alt="JCCBR Logo" class="h-8 w-auto">
+            </div>
+            <div class="font-label-caps text-label-caps text-text-muted uppercase">
+                © 2026 JULIO CESAR CABRAL
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Cursor Element -->
+    <div id="custom-cursor"
+        class="fixed top-0 left-0 w-4 h-4 bg-white rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out hidden md:block"
+        style="mix-blend-mode: difference;"></div>
+
+    <script>
+        const cursor = document.getElementById('custom-cursor');
+
+        if (cursor) {
+            // Update cursor position
+            window.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+
+            // Handle hover scaling on links, buttons, and logos
+            const interactives = document.querySelectorAll('a, button, img, [role="button"]');
+            interactives.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.classList.remove('w-4', 'h-4');
+                    cursor.classList.add('w-12', 'h-12');
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('w-12', 'h-12');
+                    cursor.classList.add('w-4', 'h-4');
+                });
+            });
+
+            // Hide custom cursor when mouse leaves the document window
+            document.addEventListener('mouseleave', () => {
+                cursor.style.opacity = '0';
+            });
+            document.addEventListener('mouseenter', () => {
+                cursor.style.opacity = '1';
+            });
+        }
+    </script>
+</body>
+
+</html>
