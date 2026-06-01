@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <link rel="icon" type="image/svg+xml" href="assets/logo_jccbr.svg"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="icon" type="image/svg+xml" href="assets/logo_jccbr.svg" />
     <title>Case Study: Fintech Ecosystem - Julio</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             display: inline-block;
             vertical-align: middle;
         }
+
         html {
             scroll-behavior: smooth;
         }
-        html, body, *, *::before, *::after {
+
+        html,
+        body,
+        *,
+        *::before,
+        *::after {
             cursor: none !important;
         }
+
         body {
             background-color: #131313;
             color: #e5e2e1;
             -webkit-font-smoothing: antialiased;
         }
+
         .brutalist-border {
             border: 1px solid #2A2A2A;
         }
+
         .accent-line {
             width: 2px;
             background-color: #9B0000;
         }
+
         .text-accent {
             color: #9B0000;
         }
@@ -124,20 +137,27 @@
         }
     </script>
 </head>
-<body class="bg-background text-on-background selection:bg-secondary-container selection:text-white overflow-x-hidden font-body-md">
+
+<body
+    class="bg-background text-on-background selection:bg-secondary-container selection:text-white overflow-x-hidden font-body-md">
     <!-- TopAppBar -->
     <nav class="fixed top-0 w-full z-50 bg-background dark:bg-background border-b border-border-subtle">
-        <div class="flex justify-between items-center px-4 md:px-margin-desktop py-stack-md max-w-[1440px] mx-auto w-full">
+        <div
+            class="flex justify-between items-center px-4 md:px-margin-desktop py-stack-md max-w-[1440px] mx-auto w-full">
             <a class="shrink-0 transition-opacity hover:opacity-80 flex items-center" href="./index.html">
                 <img src="assets/logo_jccbr.svg" alt="JCCBR Logo" class="h-8 w-auto">
             </a>
             <div class="hidden md:flex gap-8 items-center absolute left-1/2 -translate-x-1/2">
-                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer" href="./index.html#work">Work</a>
-                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer" href="./index.html#clients">Clients</a>
-                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer" href="./index.html#about">About Me</a>
+                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer"
+                    href="./index.html#work">Work</a>
+                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer"
+                    href="./index.html#clients">Clients</a>
+                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer"
+                    href="./index.html#about">About Me</a>
             </div>
             <div class="flex items-center">
-                <a class="inline-flex items-center border border-primary text-primary font-label-caps text-label-caps px-6 py-3 uppercase font-bold rounded-full hover:bg-primary hover:text-background transition-colors duration-300" href="./index.html#contact">
+                <a class="inline-flex items-center border border-primary text-primary font-label-caps text-label-caps px-6 py-3 uppercase font-bold rounded-full hover:bg-primary hover:text-background transition-colors duration-300"
+                    href="./index.html#contact">
                     Contact Me
                 </a>
             </div>
@@ -147,17 +167,21 @@
     <main>
         <!-- Project Hero Image -->
         <section class="w-full h-[50vh] pt-[81px]">
-            <img alt="Project Hero" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uj9o2QewBaN22Ycws82SmuVJ1jKRKn_9UUqIyt_xlX-qNpxrV2DbvbalubIsUEoxDWawfV-4tXmfFjzXhpn4ec3U1RtQ-iV-ElOOTLllZ86Stu5oeZYylt80btdRtTCD0DBoTkjcqDaVtEMF7aqxuMpU_pKe8fDfcU-yN0GcIQjoNqmd9DdG9ucDianuiCsvIOjJ3pslop1Viy9s-QmkXUIucPPlUxfGw2k8Gqe21vSqOmFEe3BSehXm55P"/>
+            <img alt="Project Hero" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida/ADBb0uj9o2QewBaN22Ycws82SmuVJ1jKRKn_9UUqIyt_xlX-qNpxrV2DbvbalubIsUEoxDWawfV-4tXmfFjzXhpn4ec3U1RtQ-iV-ElOOTLllZ86Stu5oeZYylt80btdRtTCD0DBoTkjcqDaVtEMF7aqxuMpU_pKe8fDfcU-yN0GcIQjoNqmd9DdG9ucDianuiCsvIOjJ3pslop1Viy9s-QmkXUIucPPlUxfGw2k8Gqe21vSqOmFEe3BSehXm55P" />
         </section>
 
         <!-- Hero Title Section -->
-        <section class="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto py-stack-lg border-b border-outline-variant">
-            <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary uppercase">
-                Fintech <br class="hidden md:block"/> Ecosystem
+        <section
+            class="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto py-stack-lg border-b border-outline-variant">
+            <h1
+                class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary uppercase">
+                Fintech <br class="hidden md:block" /> Ecosystem
             </h1>
         </section>
 
-        <section class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg border-b border-outline-variant">
+        <section
+            class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg border-b border-outline-variant">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
                     <p class="font-label-caps text-label-caps text-text-muted uppercase mb-2">Role</p>
@@ -187,7 +211,9 @@
                 </div>
                 <div class="md:w-2/3">
                     <p class="font-body-lg text-body-lg text-text-muted leading-relaxed">
-                        Designed a comprehensive financial dashboard for enterprise-level wealth management. The goal was to consolidate fragmented data streams into a single, cohesive interface that empowers advisors to make real-time decisions with 100% accuracy.
+                        Designed a comprehensive financial dashboard for enterprise-level wealth management. The goal
+                        was to consolidate fragmented data streams into a single, cohesive interface that empowers
+                        advisors to make real-time decisions with 100% accuracy.
                     </p>
                 </div>
             </section>
@@ -200,15 +226,18 @@
                 <div class="md:w-2/3 space-y-6">
                     <div class="flex items-start gap-4">
                         <span class="text-accent font-bold">01.</span>
-                        <p class="font-body-md text-body-md">Fragmented legacy infrastructure preventing real-time data sync.</p>
+                        <p class="font-body-md text-body-md">Fragmented legacy infrastructure preventing real-time data
+                            sync.</p>
                     </div>
                     <div class="border-t border-outline-variant pt-6 flex items-start gap-4">
                         <span class="text-accent font-bold">02.</span>
-                        <p class="font-body-md text-body-md">Cognitive overload due to poor information hierarchy in data tables.</p>
+                        <p class="font-body-md text-body-md">Cognitive overload due to poor information hierarchy in
+                            data tables.</p>
                     </div>
                     <div class="border-t border-outline-variant pt-6 flex items-start gap-4">
                         <span class="text-accent font-bold">03.</span>
-                        <p class="font-body-md text-body-md">Lack of mobile-responsive tools for off-site client consultations.</p>
+                        <p class="font-body-md text-body-md">Lack of mobile-responsive tools for off-site client
+                            consultations.</p>
                     </div>
                 </div>
             </section>
@@ -222,15 +251,18 @@
                     <div class="space-y-6">
                         <div class="flex items-start gap-4">
                             <span class="text-accent font-bold">01.</span>
-                            <p class="font-body-md text-body-md text-primary">Centralized data orchestration layer synchronizing all legacy inputs into a unified UI.</p>
+                            <p class="font-body-md text-body-md text-primary">Centralized data orchestration layer
+                                synchronizing all legacy inputs into a unified UI.</p>
                         </div>
                         <div class="border-t border-outline-variant pt-6 flex items-start gap-4">
                             <span class="text-accent font-bold">02.</span>
-                            <p class="font-body-md text-body-md text-primary">Atomic design principles applied to dashboard data visualization widgets.</p>
+                            <p class="font-body-md text-body-md text-primary">Atomic design principles applied to
+                                dashboard data visualization widgets.</p>
                         </div>
                         <div class="border-t border-outline-variant pt-6 flex items-start gap-4">
                             <span class="text-accent font-bold">03.</span>
-                            <p class="font-body-md text-body-md text-primary">Reduced cognitive load while maintaining the depth of information required for complex wealth management.</p>
+                            <p class="font-body-md text-body-md text-primary">Reduced cognitive load while maintaining
+                                the depth of information required for complex wealth management.</p>
                         </div>
                     </div>
                 </div>
@@ -244,17 +276,23 @@
                     </div>
                     <div class="md:w-2/3">
                         <p class="font-body-lg text-body-lg text-text-muted leading-relaxed mb-stack-lg">
-                            The platform successfully streamlined advisors' daily tasks, resulting in significant time savings and higher precision in market responses. User sentiment analysis showed a marked improvement in system trust and ease of use.
+                            The platform successfully streamlined advisors' daily tasks, resulting in significant time
+                            savings and higher precision in market responses. User sentiment analysis showed a marked
+                            improvement in system trust and ease of use.
                         </p>
                         <!-- Big Numbers -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
                             <div>
-                                <h4 class="font-display-2xl text-[80px] leading-none text-accent font-black mb-2">30%</h4>
-                                <p class="font-label-caps text-label-caps text-text-muted uppercase tracking-widest">Efficiency Increase</p>
+                                <h4 class="font-display-2xl text-[80px] leading-none text-accent font-black mb-2">30%
+                                </h4>
+                                <p class="font-label-caps text-label-caps text-text-muted uppercase tracking-widest">
+                                    Efficiency Increase</p>
                             </div>
                             <div>
-                                <h4 class="font-display-2xl text-[80px] leading-none text-primary font-black mb-2">100k+</h4>
-                                <p class="font-label-caps text-label-caps text-text-muted uppercase tracking-widest">Daily Active Users</p>
+                                <h4 class="font-display-2xl text-[80px] leading-none text-primary font-black mb-2">100k+
+                                </h4>
+                                <p class="font-label-caps text-label-caps text-text-muted uppercase tracking-widest">
+                                    Daily Active Users</p>
                             </div>
                         </div>
                     </div>
@@ -265,28 +303,39 @@
         <!-- Visual Results Grid -->
         <section class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap space-y-gutter">
             <div class="w-full">
-                <img alt="Project Hero Detail" class="w-full aspect-[21/9] object-cover brutalist-border grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uh7FHBzTNgjN0WWuFQ2M7GKjIXIaLk-KjeemybCSMA6-eJjIOQWW6AFWhNS_ZaCwgAnkjaQMbs4Gn8KkNweU26mIJZuev1zWsuic5ackW6fCzd6h9nMjzS6EYHViJtieENpN9fjXULomBHhm0dYxq9D19esqrNLrs9yHO5gLSMR8HpsRbd6cFj1Upt4Yl-0oc_xd7onL4CQufYX8AsbOm-05rpavL6waiLuM7mDKv3e_8zuG3rPAS_4FSz1"/>
+                <img alt="Project Hero Detail" class="w-full aspect-[21/9] object-cover brutalist-border "
+                    src="https://lh3.googleusercontent.com/aida/ADBb0uh7FHBzTNgjN0WWuFQ2M7GKjIXIaLk-KjeemybCSMA6-eJjIOQWW6AFWhNS_ZaCwgAnkjaQMbs4Gn8KkNweU26mIJZuev1zWsuic5ackW6fCzd6h9nMjzS6EYHViJtieENpN9fjXULomBHhm0dYxq9D19esqrNLrs9yHO5gLSMR8HpsRbd6cFj1Upt4Yl-0oc_xd7onL4CQufYX8AsbOm-05rpavL6waiLuM7mDKv3e_8zuG3rPAS_4FSz1" />
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-                <img alt="Dashboard View 1" class="w-full aspect-video object-cover brutalist-border grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uhkw6oM7s9TYKJi2ln8DYqAgmYar_4BacG5V18zxrHt0Ad1HNLowpn1cqgBMUDchTcOM9K7Cb4yuJqdip4G8QxkX5Z0HSXsMyhn8RAJgCThckuF7FB2Qt8Xs0tHmgiv0qg_0udxrKOBs29sewyo3a-Tad4fsRoyDio_FEmQ4zlrjExyt3be7JlHGM58bfuEMQ7h7SWZe0TCi-AGI-KJY-zx3NmXEc1P2_6y1cI2tyh-YXaoSaKRERIa5N3f"/>
-                <img alt="Dashboard View 2" class="w-full aspect-video object-cover brutalist-border grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uim00GbeX8xZdE9ONyihbFZDkAudrY519Kz4QbYth0gNw5l-0y_VAKrD2KYpcXsq0NzLDEYCR-vVKqBDyZw5-kkn2EWFI02U_96F4TNe27wu4F_EA3nbI1KuXfZIpfy0AKn0pZPgZsyzz5ObJRcKGs-g4PQncgMOLXCxlCjzaQjccNeOQrQ6SD_vW8vMXuP4UTxT0iWwdX27MGSjc9wlOVzcyt56dTUlHhHyMY-kFSvOqfvOWmL3_te7EJ8"/>
-                <img alt="Dashboard View 3" class="w-full aspect-video object-cover brutalist-border grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0ugMEJJeZm-DhisvViKGhtfM02ZukKFwjsBI2D1VTuFa9rqhSDIvg0Ox9vCQK1-ryBlyminGweiJwBmzD0Vtft8FntBmEOO99OSkHOmTIe0MQ8DH3bTBHh1ukbp0w02Xo0cEo16_e533IL31jDqvWpTB_tLEURLg6NCgJ2p0Ic3Mh8n-a2c9EiQhlgkMXDBiQRIwBwluXvwLz6uShD0ZXE0S57TdAJPn5grtgGNHOhnGY02PpBuuSab1gt2w"/>
-                <img alt="Dashboard View 4" class="w-full aspect-video object-cover brutalist-border grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uj9o2QewBaN22Ycws82SmuVJ1jKRKn_9UUqIyt_xlX-qNpxrV2DbvbalubIsUEoxDWawfV-4tXmfFjzXhpn4ec3U1RtQ-iV-ElOOTLllZ86Stu5oeZYylt80btdRtTCD0DBoTkjcqDaVtEMF7aqxuMpU_pKe8fDfcU-yN0GcIQjoNqmd9DdG9ucDianuiCsvIOjJ3pslop1Viy9s-QmkXUIucPPlUxfGw2k8Gqe21vSqOmFEe3BSehXm55P"/>
+                <img alt="Dashboard View 1" class="w-full aspect-video object-cover brutalist-border "
+                    src="https://lh3.googleusercontent.com/aida/ADBb0uhkw6oM7s9TYKJi2ln8DYqAgmYar_4BacG5V18zxrHt0Ad1HNLowpn1cqgBMUDchTcOM9K7Cb4yuJqdip4G8QxkX5Z0HSXsMyhn8RAJgCThckuF7FB2Qt8Xs0tHmgiv0qg_0udxrKOBs29sewyo3a-Tad4fsRoyDio_FEmQ4zlrjExyt3be7JlHGM58bfuEMQ7h7SWZe0TCi-AGI-KJY-zx3NmXEc1P2_6y1cI2tyh-YXaoSaKRERIa5N3f" />
+                <img alt="Dashboard View 2" class="w-full aspect-video object-cover brutalist-border "
+                    src="https://lh3.googleusercontent.com/aida/ADBb0uim00GbeX8xZdE9ONyihbFZDkAudrY519Kz4QbYth0gNw5l-0y_VAKrD2KYpcXsq0NzLDEYCR-vVKqBDyZw5-kkn2EWFI02U_96F4TNe27wu4F_EA3nbI1KuXfZIpfy0AKn0pZPgZsyzz5ObJRcKGs-g4PQncgMOLXCxlCjzaQjccNeOQrQ6SD_vW8vMXuP4UTxT0iWwdX27MGSjc9wlOVzcyt56dTUlHhHyMY-kFSvOqfvOWmL3_te7EJ8" />
+                <img alt="Dashboard View 3" class="w-full aspect-video object-cover brutalist-border "
+                    src="https://lh3.googleusercontent.com/aida/ADBb0ugMEJJeZm-DhisvViKGhtfM02ZukKFwjsBI2D1VTuFa9rqhSDIvg0Ox9vCQK1-ryBlyminGweiJwBmzD0Vtft8FntBmEOO99OSkHOmTIe0MQ8DH3bTBHh1ukbp0w02Xo0cEo16_e533IL31jDqvWpTB_tLEURLg6NCgJ2p0Ic3Mh8n-a2c9EiQhlgkMXDBiQRIwBwluXvwLz6uShD0ZXE0S57TdAJPn5grtgGNHOhnGY02PpBuuSab1gt2w" />
+                <img alt="Dashboard View 4" class="w-full aspect-video object-cover brutalist-border "
+                    src="https://lh3.googleusercontent.com/aida/ADBb0uj9o2QewBaN22Ycws82SmuVJ1jKRKn_9UUqIyt_xlX-qNpxrV2DbvbalubIsUEoxDWawfV-4tXmfFjzXhpn4ec3U1RtQ-iV-ElOOTLllZ86Stu5oeZYylt80btdRtTCD0DBoTkjcqDaVtEMF7aqxuMpU_pKe8fDfcU-yN0GcIQjoNqmd9DdG9ucDianuiCsvIOjJ3pslop1Viy9s-QmkXUIucPPlUxfGw2k8Gqe21vSqOmFEe3BSehXm55P" />
             </div>
         </section>
 
         <!-- Next Project Navigation -->
         <section class="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto mb-stack-lg">
-            <a class="group flex flex-col items-center justify-center py-stack-lg brutalist-border hover:bg-primary hover:text-on-primary transition-all duration-500" href="./index.html#work">
-                <span class="font-label-caps text-label-caps text-text-muted uppercase group-hover:text-on-primary mb-2 text-center">Back to Projects</span>
-                <span class="block font-headline-md text-headline-md text-primary group-hover:text-on-primary transition-colors text-center">Selected Work Overview</span>
+            <a class="group flex flex-col items-center justify-center py-stack-lg brutalist-border hover:bg-primary hover:text-on-primary transition-all duration-500"
+                href="./index.html#work">
+                <span
+                    class="font-label-caps text-label-caps text-text-muted uppercase group-hover:text-on-primary mb-2 text-center">Back
+                    to Projects</span>
+                <span
+                    class="block font-headline-md text-headline-md text-primary group-hover:text-on-primary transition-colors text-center">Selected
+                    Work Overview</span>
             </a>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="w-full bg-background dark:bg-background border-t border-border-subtle">
-        <div class="flex flex-col md:flex-row justify-between items-center px-4 md:px-margin-desktop py-stack-lg gap-stack-md max-w-[1440px] mx-auto">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-4 md:px-margin-desktop py-stack-lg gap-stack-md max-w-[1440px] mx-auto">
             <div class="shrink-0">
                 <img src="assets/logo_jccbr.svg" alt="JCCBR Logo" class="h-8 w-auto">
             </div>
@@ -315,11 +364,13 @@
         });
     </script>
     <!-- Custom Cursor Element -->
-    <div id="custom-cursor" class="fixed top-0 left-0 w-4 h-4 bg-white rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out hidden md:block" style="mix-blend-mode: difference;"></div>
+    <div id="custom-cursor"
+        class="fixed top-0 left-0 w-4 h-4 bg-white rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out hidden md:block"
+        style="mix-blend-mode: difference;"></div>
 
     <script>
         const cursor = document.getElementById('custom-cursor');
-        
+
         if (cursor) {
             // Update cursor position
             window.addEventListener('mousemove', (e) => {
@@ -350,4 +401,5 @@
         }
     </script>
 </body>
+
 </html>
