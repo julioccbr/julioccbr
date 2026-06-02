@@ -156,7 +156,7 @@
     <nav class="fixed top-0 w-full z-50 bg-background dark:bg-background border-b border-border-subtle">
         <div
             class="flex justify-between items-center px-4 md:px-margin-desktop py-stack-md max-w-[1440px] mx-auto w-full">
-            <a class="shrink-0 transition-opacity hover:opacity-80 flex items-center" href="./index.html">
+            <a class="shrink-0 transition-opacity hover:opacity-80 flex items-center" href="./">
                 <img src="assets/logo_jccbr.svg" alt="JCCBR Logo" class="h-8 w-auto">
             </a>
             <div class="hidden md:flex gap-8 items-center absolute left-1/2 -translate-x-1/2">
@@ -233,8 +233,8 @@
                 <a class="group block border rounded-[40px] overflow-hidden border-border-subtle hover-accent-border transition-colors duration-300"
                     href="./elo-b2b-partner-portal.html">
                     <div class="relative w-full aspect-[1.5] overflow-hidden bg-surface-elevated">
-                        <img alt="Elo B2B Partner Portal Cover"
-                            class="w-full h-full object-cover md: md:group-hover:-0 transition-all duration-500"
+                        <img alt="Desktop dashboard of the Elo B2B Partner Portal showing user greeting, navigation, and service tiles"
+                            class="w-full h-full object-cover transition-all duration-500"
                             src="assets/case01/case01_pic01.png">
                     </div>
                     <div
@@ -261,7 +261,8 @@
                 <a class="group block border rounded-[40px] overflow-hidden border-border-subtle hover-accent-border transition-colors duration-300"
                     href="./pague-menos-clube.html">
                     <div class="relative w-full aspect-[1.5] overflow-hidden bg-surface-elevated">
-                        <img alt="" class="w-full h-full object-cover md: md:group-hover:-0 transition-all duration-500"
+                        <img alt="Mobile UI screens of the Pague Menos app displaying digital offers, promotions, and grocery items" 
+                            class="w-full h-full object-cover transition-all duration-500"
                             src="assets/case02/case02_pic01.png">
                     </div>
                     <div
@@ -290,8 +291,8 @@
                     href="./ifood-utilities.html">
                     <div
                         class="relative w-full aspect-[1.5] overflow-hidden bg-surface-elevated flex items-center justify-center">
-                        <img alt="iFood Utilities mobile interface showcasing bill management"
-                            class="w-full h-full object-cover md: md:group-hover:-0 transition-all duration-500"
+                        <img alt="Desktop interface of the iFood Partner Portal showcasing the financial overview and utility bill management"
+                            class="w-full h-full object-cover transition-all duration-500"
                             src="assets/case03/case03_pic01.png">
                     </div>
                     <div
@@ -495,6 +496,63 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // --- Clean URL & Smooth Scroll Logic ---
+            if (window.location.protocol !== 'file:') {
+                // Intercept clicks on links that point to hash anchors
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href');
+                        const targetEl = document.querySelector(targetId);
+                        if (targetEl) {
+                            const offset = 80;
+                            const bodyRect = document.body.getBoundingClientRect().top;
+                            const elementRect = targetEl.getBoundingClientRect().top;
+                            const elementPosition = elementRect - bodyRect;
+                            const offsetPosition = elementPosition - offset;
+
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+
+                // Handle incoming scroll requests (e.g. hash in URL from other pages) and clean the URL
+                const handleIncomingHash = () => {
+                    const hash = window.location.hash;
+                    if (hash) {
+                        const targetEl = document.querySelector(hash);
+                        if (targetEl) {
+                            setTimeout(() => {
+                                const offset = 80;
+                                const bodyRect = document.body.getBoundingClientRect().top;
+                                const elementRect = targetEl.getBoundingClientRect().top;
+                                const elementPosition = elementRect - bodyRect;
+                                const offsetPosition = elementPosition - offset;
+
+                                window.scrollTo({
+                                    top: offsetPosition,
+                                    behavior: 'smooth'
+                                });
+                            }, 100);
+                        }
+                    }
+
+                    // Clean the address bar: remove index.html and any trailing hash
+                    let cleanPath = window.location.pathname.replace(/index\.html$/, '');
+                    if (!cleanPath.startsWith('/')) {
+                        cleanPath = '/' + cleanPath;
+                    }
+                    window.history.replaceState(null, null, cleanPath);
+                };
+
+                // Run on load to clean index.html and hash
+                handleIncomingHash();
+            }
+            // --- End Clean URL & Smooth Scroll Logic ---
+
             const modal = document.getElementById('image-modal');
             const modalImg = document.getElementById('modal-img');
 

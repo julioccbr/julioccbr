@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <link rel="icon" type="image/svg+xml" href="assets/logo_jccbr.svg" />
-    <title>Case Study: Pague Menos Benefits Club - Julio</title>
+    <title>Julio - Pague Menos App Benefits</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -144,7 +144,7 @@
         <!-- Back Button Container -->
         <div
             class="absolute top-6 md:top-8 w-full left-1/2 -translate-x-1/2 z-10 px-margin-mobile md:px-margin-desktop max-w-[1440px]">
-            <a href="./index.html"
+            <a href="./"
                 class="inline-flex bg-background text-primary border border-border-subtle font-bold font-label-caps text-label-caps uppercase px-6 py-3 rounded-full hover:bg-surface-elevated transition-colors items-center gap-2">
                 <span class="material-symbols-outlined text-[18px]">arrow_back</span>
                 Back
@@ -153,7 +153,7 @@
 
         <!-- Project Hero Image -->
         <section class="w-full h-[60vh] md:h-[70vh]">
-            <img alt="Pague Menos Benefits Club App showcasing digital offers on a smartphone"
+            <img alt="Pague Menos Benefits Club App home screen showcasing digital offers on a smartphone mockup"
                 class="w-full h-full object-cover" src="assets/case02/case02_pic01.png" />
         </section>
 
@@ -360,17 +360,17 @@
         <!-- Visual Results Grid -->
         <section class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap space-y-gutter">
             <div class="w-full">
-                <img alt="Pague Menos Benefits Club App showcasing digital offers on a smartphone"
+                <img alt="Pague Menos Benefits Club App home screen showcasing digital offers on a smartphone mockup"
                     class="w-full object-cover zoomable-img" src="assets/case02/case02_pic01.png" />
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-                <img alt="Mobile UI mockup of the Pague Menos app showing active promotions and discounts in a list view"
+                <img alt="Mobile UI mockups of the Pague Menos app user onboarding and authentication flow screens, showing personal details registration and SMS code verification"
                     class="w-full object-cover zoomable-img" src="assets/case02/case02_pic02.png" />
-                <img alt="Mobile UI mockup of the Pague Menos app displaying a specific product offer details page"
+                <img alt="Mobile UI mockups showing the Pague Menos app Savings Tracker (Econometro) empty state and a categorized product search list"
                     class="w-full object-cover zoomable-img" src="assets/case02/case02_pic03.png" />
-                <img alt="Mobile UI mockup of the Pague Menos app Savings Tracker feature, showing how much money the user has saved"
+                <img alt="Mobile UI mockups showing the Pague Menos app sidebar navigation menu with user greeting 'Olá, Júlio!' and an empty search results state"
                     class="w-full object-cover zoomable-img" src="assets/case02/case02_pic04.png" />
-                <img alt="Mobile UI mockup of the Pague Menos app Sweepstakes section, allowing users to enter draws and check digital lucky numbers"
+                <img alt="Mobile UI mockups showing the store selection map view and push notifications configuration settings in the Pague Menos app"
                     class="w-full object-cover zoomable-img" src="assets/case02/case02_pic05.png" />
             </div>
         </section>
@@ -378,7 +378,7 @@
         <!-- Next Project Navigation -->
         <section class="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto mb-stack-lg">
             <a class="group flex flex-col items-center justify-center py-stack-lg brutalist-border rounded-full hover:bg-primary hover:text-on-primary transition-all duration-500"
-                href="./index.html#work">
+                href="./#work">
                 <span
                     class="font-label-caps text-label-caps text-text-muted uppercase group-hover:text-on-primary mb-2 text-center">Back
                     to Projects</span>
@@ -404,6 +404,12 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Clean URL: remove .html extension from address bar
+            if (window.location.protocol !== 'file:') {
+                const cleanPath = window.location.pathname.replace(/\.html$/, '');
+                window.history.replaceState(null, null, cleanPath);
+            }
+
             const observerOptions = { threshold: 0.1 };
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
