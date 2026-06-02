@@ -8,6 +8,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         elo: resolve(__dirname, 'elo-b2b-partner-portal.html'),
         paguemenos: resolve(__dirname, 'pague-menos-clube.html'),
+        ifood: resolve(__dirname, 'ifood-utilities.html'),
       },
     },
   },
