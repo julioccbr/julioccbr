@@ -140,33 +140,17 @@
 
 <body
     class="bg-background text-on-background selection:bg-secondary-container selection:text-white overflow-x-hidden font-body-md">
-    <!-- TopAppBar -->
-    <nav class="fixed top-0 w-full z-50 bg-background dark:bg-background border-b border-border-subtle">
-        <div
-            class="flex justify-between items-center px-4 md:px-margin-desktop py-stack-md max-w-[1440px] mx-auto w-full">
-            <a class="shrink-0 transition-opacity hover:opacity-80 flex items-center" href="./index.html">
-                <img src="assets/logo_jccbr.svg" alt="JCCBR Logo" class="h-8 w-auto">
+    <main class="relative">
+        <!-- Back Button Container -->
+        <div class="absolute top-6 md:top-8 w-full left-1/2 -translate-x-1/2 z-10 px-margin-mobile md:px-margin-desktop max-w-[1440px]">
+            <a href="./index.html" class="inline-flex bg-background text-primary border border-border-subtle font-bold font-label-caps text-label-caps uppercase px-6 py-3 rounded-full hover:bg-surface-elevated transition-colors items-center gap-2">
+                <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                Back
             </a>
-            <div class="hidden md:flex gap-8 items-center absolute left-1/2 -translate-x-1/2">
-                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer"
-                    href="./index.html#work">Work</a>
-                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer"
-                    href="./index.html#clients">Clients</a>
-                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer"
-                    href="./index.html#about">About Me</a>
-            </div>
-            <div class="flex items-center">
-                <a class="inline-flex items-center border border-primary text-primary font-label-caps text-label-caps px-6 py-3 uppercase font-bold rounded-full hover:bg-primary hover:text-background transition-colors duration-300"
-                    href="./index.html#contact">
-                    Contact Me
-                </a>
-            </div>
         </div>
-    </nav>
 
-    <main>
         <!-- Project Hero Image -->
-        <section class="w-full h-[50vh] pt-[81px]">
+        <section class="w-full h-[60vh] md:h-[70vh]">
             <img alt="Elo B2B Partner Portal Hero" class="w-full h-full object-cover"
                 src="assets/case01/case01_pic01.png" />
         </section>
@@ -435,8 +419,10 @@
     </script>
     <!-- Custom Cursor Element -->
     <div id="custom-cursor"
-        class="fixed top-0 left-0 w-4 h-4 bg-white rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out hidden md:block"
-        style="mix-blend-mode: difference;"></div>
+        class="fixed top-0 left-0 w-4 h-4 bg-white text-black flex items-center justify-center font-bold text-2xl rounded-full pointer-events-none z-[10010] -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out hidden md:flex"
+        style="mix-blend-mode: difference;">
+        <span id="cursor-icon" class="opacity-0 transition-opacity duration-150 mt-[-2px]"></span>
+    </div>
 
     <script>
         const cursor = document.getElementById('custom-cursor');
@@ -446,18 +432,47 @@
             window.addEventListener('mousemove', (e) => {
                 cursor.style.left = e.clientX + 'px';
                 cursor.style.top = e.clientY + 'px';
+
+                const modal = document.getElementById('image-modal');
+                const cursorIcon = document.getElementById('cursor-icon');
+                if (modal && !modal.classList.contains('hidden')) {
+                    cursor.classList.remove('w-4', 'h-4');
+                    cursor.classList.add('w-12', 'h-12');
+                    if (cursorIcon) {
+                        cursorIcon.textContent = '-';
+                        cursorIcon.classList.remove('opacity-0');
+                    }
+                }
             });
 
             // Handle hover scaling on links, buttons, and logos
-            const interactives = document.querySelectorAll('a, button, img, [role="button"]');
+            const interactives = document.querySelectorAll('a, button, img, [role="button"], #image-modal');
+            const cursorIcon = document.getElementById('cursor-icon');
+
             interactives.forEach(el => {
                 el.addEventListener('mouseenter', () => {
                     cursor.classList.remove('w-4', 'h-4');
                     cursor.classList.add('w-12', 'h-12');
+
+                    if (cursorIcon) {
+                        if (el.id === 'image-modal' || el.id === 'modal-img') {
+                            cursorIcon.textContent = '-';
+                            cursorIcon.classList.remove('opacity-0');
+                        } else if (el.tagName === 'IMG' && el.closest('main')) {
+                            cursorIcon.textContent = '+';
+                            cursorIcon.classList.remove('opacity-0');
+                        }
+                    }
                 });
                 el.addEventListener('mouseleave', () => {
+                    const modal = document.getElementById('image-modal');
+                    if (modal && !modal.classList.contains('hidden')) return;
+
                     cursor.classList.remove('w-12', 'h-12');
                     cursor.classList.add('w-4', 'h-4');
+                    if (cursorIcon) {
+                        cursorIcon.classList.add('opacity-0');
+                    }
                 });
             });
 
@@ -469,6 +484,72 @@
                 cursor.style.opacity = '1';
             });
         }
+    </script>
+
+    <!-- Image Modal Overlay -->
+    <div id="image-modal"
+        class="fixed inset-0 z-[10000] bg-[#131313]/95 hidden flex justify-center items-center opacity-0 transition-opacity duration-300 backdrop-blur-sm cursor-pointer">
+        <img id="modal-img" class="max-w-[90%] max-h-[90vh] object-contain rounded-xl shadow-2xl cursor-pointer" src=""
+            alt="Expanded image" />
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+
+            // Select all images in main section except the logo or specific icons if any
+            const images = document.querySelectorAll('main img');
+
+            images.forEach(img => {
+                // Style images to look clickable
+                img.classList.add('cursor-pointer');
+
+                img.addEventListener('click', () => {
+                    modalImg.src = img.src;
+                    modal.classList.remove('hidden');
+
+                    const cursorIcon = document.getElementById('cursor-icon');
+                    if (cursorIcon) {
+                        cursorIcon.textContent = '-';
+                        cursorIcon.classList.remove('opacity-0');
+                    }
+
+                    // Small delay to allow display:block to apply before animating opacity
+                    setTimeout(() => {
+                        modal.classList.remove('opacity-0');
+                        modal.classList.add('opacity-100');
+                    }, 10);
+                });
+            });
+
+            const closeModal = () => {
+                modal.classList.remove('opacity-100');
+                modal.classList.add('opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modalImg.src = '';
+
+                    const cursorIcon = document.getElementById('cursor-icon');
+                    if (cursorIcon) {
+                        cursorIcon.classList.add('opacity-0');
+                        cursor.classList.remove('w-12', 'h-12');
+                        cursor.classList.add('w-4', 'h-4');
+                    }
+                }, 300);
+            };
+
+            modal.addEventListener('click', () => {
+                closeModal();
+            });
+
+            // Close on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    closeModal();
+                }
+            });
+        });
     </script>
 </body>
 

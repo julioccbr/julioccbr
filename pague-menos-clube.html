@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <link rel="icon" type="image/svg+xml" href="assets/logo_jccbr.svg" />
-    <title>Case Study: Fintech Ecosystem - Julio</title>
+    <title>Case Study: Pague Menos Benefits Club - Julio</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -140,35 +140,19 @@
 
 <body
     class="bg-background text-on-background selection:bg-secondary-container selection:text-white overflow-x-hidden font-body-md">
-    <!-- TopAppBar -->
-    <nav class="fixed top-0 w-full z-50 bg-background dark:bg-background border-b border-border-subtle">
-        <div
-            class="flex justify-between items-center px-4 md:px-margin-desktop py-stack-md max-w-[1440px] mx-auto w-full">
-            <a class="shrink-0 transition-opacity hover:opacity-80 flex items-center" href="./index.html">
-                <img src="assets/logo_jccbr.svg" alt="JCCBR Logo" class="h-8 w-auto">
+    <main class="relative">
+        <!-- Back Button Container -->
+        <div class="absolute top-6 md:top-8 w-full left-1/2 -translate-x-1/2 z-10 px-margin-mobile md:px-margin-desktop max-w-[1440px]">
+            <a href="./index.html" class="inline-flex bg-background text-primary border border-border-subtle font-bold font-label-caps text-label-caps uppercase px-6 py-3 rounded-full hover:bg-surface-elevated transition-colors items-center gap-2">
+                <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                Back
             </a>
-            <div class="hidden md:flex gap-8 items-center absolute left-1/2 -translate-x-1/2">
-                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer"
-                    href="./index.html#work">Work</a>
-                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer"
-                    href="./index.html#clients">Clients</a>
-                <a class="font-body-md text-body-md text-primary dark:text-primary hover:text-accent transition-colors duration-300 cursor-pointer"
-                    href="./index.html#about">About Me</a>
-            </div>
-            <div class="flex items-center">
-                <a class="inline-flex items-center border border-primary text-primary font-label-caps text-label-caps px-6 py-3 uppercase font-bold rounded-full hover:bg-primary hover:text-background transition-colors duration-300"
-                    href="./index.html#contact">
-                    Contact Me
-                </a>
-            </div>
         </div>
-    </nav>
 
-    <main>
         <!-- Project Hero Image -->
-        <section class="w-full h-[50vh] pt-[81px]">
-            <img alt="Project Hero" class="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida/ADBb0uj9o2QewBaN22Ycws82SmuVJ1jKRKn_9UUqIyt_xlX-qNpxrV2DbvbalubIsUEoxDWawfV-4tXmfFjzXhpn4ec3U1RtQ-iV-ElOOTLllZ86Stu5oeZYylt80btdRtTCD0DBoTkjcqDaVtEMF7aqxuMpU_pKe8fDfcU-yN0GcIQjoNqmd9DdG9ucDianuiCsvIOjJ3pslop1Viy9s-QmkXUIucPPlUxfGw2k8Gqe21vSqOmFEe3BSehXm55P" />
+        <section class="w-full h-[60vh] md:h-[70vh]">
+            <img alt="Elo B2B Partner Portal Hero" class="w-full h-full object-cover"
+                src="assets/case01/case01_pic01.png" />
         </section>
 
         <!-- Hero Title Section -->
@@ -176,7 +160,7 @@
             class="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto py-stack-lg border-b border-outline-variant">
             <h1
                 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary uppercase">
-                Fintech <br class="hidden md:block" /> Ecosystem
+                Pague Menos Benefits Club
             </h1>
         </section>
 
@@ -185,19 +169,19 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
                     <p class="font-label-caps text-label-caps text-text-muted uppercase mb-2">Role</p>
-                    <p class="font-body-md text-primary">Lead Product Designer</p>
+                    <p class="font-body-md text-primary">Product Designer (UX/UI)</p>
                 </div>
                 <div>
                     <p class="font-label-caps text-label-caps text-text-muted uppercase mb-2">Timeline</p>
-                    <p class="font-body-md text-primary">6 Months (2023)</p>
+                    <p class="font-body-md text-primary">2 Months</p>
                 </div>
                 <div>
                     <p class="font-label-caps text-label-caps text-text-muted uppercase mb-2">Platform</p>
-                    <p class="font-body-md text-primary">Web App (Desktop)</p>
+                    <p class="font-body-md text-primary">Mobile App (iOS & Android)</p>
                 </div>
                 <div>
                     <p class="font-label-caps text-label-caps text-text-muted uppercase mb-2">Tools</p>
-                    <p class="font-body-md text-primary">Figma, React, D3.js</p>
+                    <p class="font-body-md text-primary">Figma, User Testing</p>
                 </div>
             </div>
         </section>
@@ -209,11 +193,13 @@
                 <div class="md:w-1/3">
                     <h2 class="font-headline-md text-headline-md text-primary uppercase">The Context</h2>
                 </div>
-                <div class="md:w-2/3">
+                <div class="md:w-2/3 space-y-6">
                     <p class="font-body-lg text-body-lg text-text-muted leading-relaxed">
-                        Designed a comprehensive financial dashboard for enterprise-level wealth management. The goal
-                        was to consolidate fragmented data streams into a single, cohesive interface that empowers
-                        advisors to make real-time decisions with 100% accuracy.
+                        According to Supermercado Pague Menos' internal research, very few people knew about their offers and promotions. Even those who did struggled to understand how to use them, or found out the promotions weren't valid in their local region. Historically, these promotions were distributed via physical flyers, but customer engagement with print media was rapidly declining. Digitizing this experience became a key strategic opportunity.
+                    </p>
+                    <p
+                        class="font-body-lg text-body-lg text-text-muted leading-relaxed border-t border-outline-variant pt-6">
+                        <strong>The Goal:</strong> We were brought in to build the new Benefits Club application from the ground up. Key features included viewing and activating localized offers, browsing campaigns, a 'Savings Tracker' (Econometro) to show accumulated savings over time, and a system to participate in gamified sweepstakes.
                     </p>
                 </div>
             </section>
@@ -226,18 +212,31 @@
                 <div class="md:w-2/3 space-y-6">
                     <div class="flex items-start gap-4">
                         <span class="text-accent font-bold">01.</span>
-                        <p class="font-body-md text-body-md">Fragmented legacy infrastructure preventing real-time data
-                            sync.</p>
+                        <div>
+                            <h4 class="font-body-md text-primary font-bold mb-1">Low Promotion Awareness</h4>
+                            <p class="font-body-md text-body-md text-text-muted">Customers were largely unaware of ongoing offers due to a heavy reliance on outdated physical flyers that were no longer capturing attention.</p>
+                        </div>
                     </div>
                     <div class="border-t border-outline-variant pt-6 flex items-start gap-4">
                         <span class="text-accent font-bold">02.</span>
-                        <p class="font-body-md text-body-md">Cognitive overload due to poor information hierarchy in
-                            data tables.</p>
+                        <div>
+                            <h4 class="font-body-md text-primary font-bold mb-1">Usability & Context Issues</h4>
+                            <p class="font-body-md text-body-md text-text-muted">Existing promotions were confusing to use or geographically restricted without clear communication, leading to frustration at checkout.</p>
+                        </div>
                     </div>
                     <div class="border-t border-outline-variant pt-6 flex items-start gap-4">
                         <span class="text-accent font-bold">03.</span>
-                        <p class="font-body-md text-body-md">Lack of mobile-responsive tools for off-site client
-                            consultations.</p>
+                        <div>
+                            <h4 class="font-body-md text-primary font-bold mb-1">Lack of Engagement</h4>
+                            <p class="font-body-md text-body-md text-text-muted">The loyalty initiatives lacked digital touchpoints, gamification, and personalized tracking to keep users coming back.</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-outline-variant pt-6 flex items-start gap-4">
+                        <span class="text-accent font-bold">04.</span>
+                        <div>
+                            <h4 class="font-body-md text-primary font-bold mb-1">Digital Transformation</h4>
+                            <p class="font-body-md text-body-md text-text-muted">Shifting a traditional supermarket customer base into an active, digital-first mobile ecosystem required an extremely intuitive and rewarding UX.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -251,18 +250,24 @@
                     <div class="space-y-6">
                         <div class="flex items-start gap-4">
                             <span class="text-accent font-bold">01.</span>
-                            <p class="font-body-md text-body-md text-primary">Centralized data orchestration layer
-                                synchronizing all legacy inputs into a unified UI.</p>
+                            <div>
+                                <h4 class="font-body-md text-primary font-bold mb-1">Digital Offer Activation</h4>
+                                <p class="font-body-md text-body-md text-text-muted">Designed a centralized mobile hub where users can easily browse, filter, and activate personalized offers that are guaranteed valid for their specific region.</p>
+                            </div>
                         </div>
                         <div class="border-t border-outline-variant pt-6 flex items-start gap-4">
                             <span class="text-accent font-bold">02.</span>
-                            <p class="font-body-md text-body-md text-primary">Atomic design principles applied to
-                                dashboard data visualization widgets.</p>
+                            <div>
+                                <h4 class="font-body-md text-primary font-bold mb-1">Savings Tracker (Econometro)</h4>
+                                <p class="font-body-md text-body-md text-text-muted">Created a gamified dashboard showing users exactly how much they saved over time, reinforcing the app's tangible value and encouraging repeat usage.</p>
+                            </div>
                         </div>
                         <div class="border-t border-outline-variant pt-6 flex items-start gap-4">
                             <span class="text-accent font-bold">03.</span>
-                            <p class="font-body-md text-body-md text-primary">Reduced cognitive load while maintaining
-                                the depth of information required for complex wealth management.</p>
+                            <div>
+                                <h4 class="font-body-md text-primary font-bold mb-1">Campaigns & Sweepstakes</h4>
+                                <p class="font-body-md text-body-md text-text-muted">Integrated campaign participation directly into the app, making it effortless to join sweepstakes, track digital lucky numbers, and view results seamlessly.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -276,25 +281,42 @@
                     </div>
                     <div class="md:w-2/3">
                         <p class="font-body-lg text-body-lg text-text-muted leading-relaxed mb-stack-lg">
-                            The platform successfully streamlined advisors' daily tasks, resulting in significant time
-                            savings and higher precision in market responses. User sentiment analysis showed a marked
-                            improvement in system trust and ease of use.
+                            The Pague Menos Benefits Club app successfully digitized the promotional experience, driving higher engagement and redemption rates while entirely modernizing the supermarket's loyalty program for the mobile era.
                         </p>
                         <!-- Big Numbers -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
                             <div>
-                                <h4 class="font-display-2xl text-[80px] leading-none text-accent font-black mb-2">30%
+                                <h4 class="font-display-2xl text-[80px] leading-none text-accent font-black mb-2">
+                                    +1M
                                 </h4>
-                                <p class="font-label-caps text-label-caps text-text-muted uppercase tracking-widest">
-                                    Efficiency Increase</p>
+                                <p
+                                    class="font-label-caps text-label-caps text-text-muted uppercase tracking-widest font-bold">
+                                    Downloads in First Year</p>
                             </div>
                             <div>
-                                <h4 class="font-display-2xl text-[80px] leading-none text-primary font-black mb-2">100k+
+                                <h4 class="font-display-2xl text-[80px] leading-none text-primary font-black mb-2">
+                                    4.8</h4>
+                                <p
+                                    class="font-label-caps text-label-caps text-text-muted uppercase tracking-widest font-bold font-bold">
+                                    APP STORE RATING </p>
+                            </div>
+                            <div>
+                                <h4 class="font-display-2xl text-[80px] leading-none text-accent font-black mb-2">
+                                    +50%
                                 </h4>
-                                <p class="font-label-caps text-label-caps text-text-muted uppercase tracking-widest">
-                                    Daily Active Users</p>
+                                <p
+                                    class="font-label-caps text-label-caps text-text-muted uppercase tracking-widest font-bold">
+                                    Offer Redemption Rate</p>
+                            </div>
+                            <div>
+                                <h4 class="font-display-2xl text-[80px] leading-none text-primary font-black mb-2">
+                                    4</h4>
+                                <p
+                                    class="font-label-caps text-label-caps text-text-muted uppercase tracking-widest font-bold font-bold">
+                                    CORE FEATURES LAUNCHED</p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>
@@ -303,24 +325,24 @@
         <!-- Visual Results Grid -->
         <section class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap space-y-gutter">
             <div class="w-full">
-                <img alt="Project Hero Detail" class="w-full aspect-[21/9] object-cover brutalist-border "
-                    src="https://lh3.googleusercontent.com/aida/ADBb0uh7FHBzTNgjN0WWuFQ2M7GKjIXIaLk-KjeemybCSMA6-eJjIOQWW6AFWhNS_ZaCwgAnkjaQMbs4Gn8KkNweU26mIJZuev1zWsuic5ackW6fCzd6h9nMjzS6EYHViJtieENpN9fjXULomBHhm0dYxq9D19esqrNLrs9yHO5gLSMR8HpsRbd6cFj1Upt4Yl-0oc_xd7onL4CQufYX8AsbOm-05rpavL6waiLuM7mDKv3e_8zuG3rPAS_4FSz1" />
+                <img alt="Elo B2B Redesigned Desktop Portal Dashboard" class="w-full object-cover "
+                    src="assets/case01/case01_pic01.png" />
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-                <img alt="Dashboard View 1" class="w-full aspect-video object-cover brutalist-border "
-                    src="https://lh3.googleusercontent.com/aida/ADBb0uhkw6oM7s9TYKJi2ln8DYqAgmYar_4BacG5V18zxrHt0Ad1HNLowpn1cqgBMUDchTcOM9K7Cb4yuJqdip4G8QxkX5Z0HSXsMyhn8RAJgCThckuF7FB2Qt8Xs0tHmgiv0qg_0udxrKOBs29sewyo3a-Tad4fsRoyDio_FEmQ4zlrjExyt3be7JlHGM58bfuEMQ7h7SWZe0TCi-AGI-KJY-zx3NmXEc1P2_6y1cI2tyh-YXaoSaKRERIa5N3f" />
-                <img alt="Dashboard View 2" class="w-full aspect-video object-cover brutalist-border "
-                    src="https://lh3.googleusercontent.com/aida/ADBb0uim00GbeX8xZdE9ONyihbFZDkAudrY519Kz4QbYth0gNw5l-0y_VAKrD2KYpcXsq0NzLDEYCR-vVKqBDyZw5-kkn2EWFI02U_96F4TNe27wu4F_EA3nbI1KuXfZIpfy0AKn0pZPgZsyzz5ObJRcKGs-g4PQncgMOLXCxlCjzaQjccNeOQrQ6SD_vW8vMXuP4UTxT0iWwdX27MGSjc9wlOVzcyt56dTUlHhHyMY-kFSvOqfvOWmL3_te7EJ8" />
-                <img alt="Dashboard View 3" class="w-full aspect-video object-cover brutalist-border "
-                    src="https://lh3.googleusercontent.com/aida/ADBb0ugMEJJeZm-DhisvViKGhtfM02ZukKFwjsBI2D1VTuFa9rqhSDIvg0Ox9vCQK1-ryBlyminGweiJwBmzD0Vtft8FntBmEOO99OSkHOmTIe0MQ8DH3bTBHh1ukbp0w02Xo0cEo16_e533IL31jDqvWpTB_tLEURLg6NCgJ2p0Ic3Mh8n-a2c9EiQhlgkMXDBiQRIwBwluXvwLz6uShD0ZXE0S57TdAJPn5grtgGNHOhnGY02PpBuuSab1gt2w" />
-                <img alt="Dashboard View 4" class="w-full aspect-video object-cover brutalist-border "
-                    src="https://lh3.googleusercontent.com/aida/ADBb0uj9o2QewBaN22Ycws82SmuVJ1jKRKn_9UUqIyt_xlX-qNpxrV2DbvbalubIsUEoxDWawfV-4tXmfFjzXhpn4ec3U1RtQ-iV-ElOOTLllZ86Stu5oeZYylt80btdRtTCD0DBoTkjcqDaVtEMF7aqxuMpU_pKe8fDfcU-yN0GcIQjoNqmd9DdG9ucDianuiCsvIOjJ3pslop1Viy9s-QmkXUIucPPlUxfGw2k8Gqe21vSqOmFEe3BSehXm55P" />
+                <img alt="UI mockup of the Elo B2B portal showing a request status page with a progress stepper and detailed partner information"
+                    class="w-full object-cover " src="assets/case01/case01_pic02.png" />
+                <img alt="UI mockup of the Elo user registration flow featuring a partner selection form and a user permissions matrix table"
+                    class="w-full object-cover " src="assets/case01/case01_pic03.png" />
+                <img alt="Design system documentation screen for a Dialog component showing detailed spacing and measurement redlines for developers"
+                    class="w-full object-cover " src="assets/case01/case01_pic04.png" />
+                <img alt="Zoomed-out view of a Figma canvas displaying the organized structural layout of multiple UI screens and the layers panel"
+                    class="w-full object-cover " src="assets/case01/case01_pic05.png" />
             </div>
         </section>
 
         <!-- Next Project Navigation -->
         <section class="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto mb-stack-lg">
-            <a class="group flex flex-col items-center justify-center py-stack-lg brutalist-border hover:bg-primary hover:text-on-primary transition-all duration-500"
+            <a class="group flex flex-col items-center justify-center py-stack-lg brutalist-border rounded-full hover:bg-primary hover:text-on-primary transition-all duration-500"
                 href="./index.html#work">
                 <span
                     class="font-label-caps text-label-caps text-text-muted uppercase group-hover:text-on-primary mb-2 text-center">Back
@@ -357,7 +379,7 @@
                 });
             }, observerOptions);
 
-            document.querySelectorAll('section').forEach(section => {
+            document.querySelectorAll('main > section, .max-w-\\[1440px\\] > section').forEach(section => {
                 section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
                 observer.observe(section);
             });
@@ -365,8 +387,10 @@
     </script>
     <!-- Custom Cursor Element -->
     <div id="custom-cursor"
-        class="fixed top-0 left-0 w-4 h-4 bg-white rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out hidden md:block"
-        style="mix-blend-mode: difference;"></div>
+        class="fixed top-0 left-0 w-4 h-4 bg-white text-black flex items-center justify-center font-bold text-2xl rounded-full pointer-events-none z-[10010] -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out hidden md:flex"
+        style="mix-blend-mode: difference;">
+        <span id="cursor-icon" class="opacity-0 transition-opacity duration-150 mt-[-2px]"></span>
+    </div>
 
     <script>
         const cursor = document.getElementById('custom-cursor');
@@ -376,18 +400,47 @@
             window.addEventListener('mousemove', (e) => {
                 cursor.style.left = e.clientX + 'px';
                 cursor.style.top = e.clientY + 'px';
+
+                const modal = document.getElementById('image-modal');
+                const cursorIcon = document.getElementById('cursor-icon');
+                if (modal && !modal.classList.contains('hidden')) {
+                    cursor.classList.remove('w-4', 'h-4');
+                    cursor.classList.add('w-12', 'h-12');
+                    if (cursorIcon) {
+                        cursorIcon.textContent = '-';
+                        cursorIcon.classList.remove('opacity-0');
+                    }
+                }
             });
 
             // Handle hover scaling on links, buttons, and logos
-            const interactives = document.querySelectorAll('a, button, img, [role="button"]');
+            const interactives = document.querySelectorAll('a, button, img, [role="button"], #image-modal');
+            const cursorIcon = document.getElementById('cursor-icon');
+
             interactives.forEach(el => {
                 el.addEventListener('mouseenter', () => {
                     cursor.classList.remove('w-4', 'h-4');
                     cursor.classList.add('w-12', 'h-12');
+
+                    if (cursorIcon) {
+                        if (el.id === 'image-modal' || el.id === 'modal-img') {
+                            cursorIcon.textContent = '-';
+                            cursorIcon.classList.remove('opacity-0');
+                        } else if (el.tagName === 'IMG' && el.closest('main')) {
+                            cursorIcon.textContent = '+';
+                            cursorIcon.classList.remove('opacity-0');
+                        }
+                    }
                 });
                 el.addEventListener('mouseleave', () => {
+                    const modal = document.getElementById('image-modal');
+                    if (modal && !modal.classList.contains('hidden')) return;
+
                     cursor.classList.remove('w-12', 'h-12');
                     cursor.classList.add('w-4', 'h-4');
+                    if (cursorIcon) {
+                        cursorIcon.classList.add('opacity-0');
+                    }
                 });
             });
 
@@ -399,6 +452,72 @@
                 cursor.style.opacity = '1';
             });
         }
+    </script>
+
+    <!-- Image Modal Overlay -->
+    <div id="image-modal"
+        class="fixed inset-0 z-[10000] bg-[#131313]/95 hidden flex justify-center items-center opacity-0 transition-opacity duration-300 backdrop-blur-sm cursor-pointer">
+        <img id="modal-img" class="max-w-[90%] max-h-[90vh] object-contain rounded-xl shadow-2xl cursor-pointer" src=""
+            alt="Expanded image" />
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+
+            // Select all images in main section except the logo or specific icons if any
+            const images = document.querySelectorAll('main img');
+
+            images.forEach(img => {
+                // Style images to look clickable
+                img.classList.add('cursor-pointer');
+
+                img.addEventListener('click', () => {
+                    modalImg.src = img.src;
+                    modal.classList.remove('hidden');
+
+                    const cursorIcon = document.getElementById('cursor-icon');
+                    if (cursorIcon) {
+                        cursorIcon.textContent = '-';
+                        cursorIcon.classList.remove('opacity-0');
+                    }
+
+                    // Small delay to allow display:block to apply before animating opacity
+                    setTimeout(() => {
+                        modal.classList.remove('opacity-0');
+                        modal.classList.add('opacity-100');
+                    }, 10);
+                });
+            });
+
+            const closeModal = () => {
+                modal.classList.remove('opacity-100');
+                modal.classList.add('opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modalImg.src = '';
+
+                    const cursorIcon = document.getElementById('cursor-icon');
+                    if (cursorIcon) {
+                        cursorIcon.classList.add('opacity-0');
+                        cursor.classList.remove('w-12', 'h-12');
+                        cursor.classList.add('w-4', 'h-4');
+                    }
+                }, 300);
+            };
+
+            modal.addEventListener('click', () => {
+                closeModal();
+            });
+
+            // Close on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    closeModal();
+                }
+            });
+        });
     </script>
 </body>
 
