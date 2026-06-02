@@ -263,7 +263,7 @@
                     <div class="relative w-full aspect-[1.5] overflow-hidden bg-surface-elevated">
                         <img alt=""
                             class="w-full h-full object-cover md:grayscale md:group-hover:grayscale-0 transition-all duration-500"
-                            src="https://lh3.googleusercontent.com/aida/ADBb0uj9o2QewBaN22Ycws82SmuVJ1jKRKn_9UUqIyt_xlX-qNpxrV2DbvbalubIsUEoxDWawfV-4tXmfFjzXhpn4ec3U1RtQ-iV-ElOOTLllZ86Stu5oeZYylt80btdRtTCD0DBoTkjcqDaVtEMF7aqxuMpU_pKe8fDfcU-yN0GcIQjoNqmd9DdG9ucDianuiCsvIOjJ3pslop1Viy9s-QmkXUIucPPlUxfGw2k8Gqe21vSqOmFEe3BSehXm55P">
+                            src="assets/case02/case02_pic01.png">
                     </div>
                     <div
                         class="p-stack-md border-t border-border-subtle flex flex-col gap-3 group-hover:bg-surface-container-low transition-colors duration-300">
@@ -274,9 +274,14 @@
                         </div>
                         <div class="flex flex-wrap gap-2">
                             <span
-                                class="bg-accent text-primary text-[9px] font-extrabold font-label-caps uppercase tracking-widest px-3 py-1 rounded-full">Product Design</span>
+                                class="bg-accent text-primary text-[9px] font-extrabold font-label-caps uppercase tracking-widest px-3 py-1 rounded-full">
+                                Product Design</span>
                             <span
-                                class="bg-accent text-primary text-[9px] font-extrabold font-label-caps uppercase tracking-widest px-3 py-1 rounded-full">Mobile App</span>
+                                class="bg-accent text-primary text-[9px] font-extrabold font-label-caps uppercase tracking-widest px-3 py-1 rounded-full">
+                                Native Mobile</span>
+                            <span
+                                class="bg-accent text-primary text-[9px] font-extrabold font-label-caps uppercase tracking-widest px-3 py-1 rounded-full">
+                                Low Code Development</span>
                         </div>
                     </div>
                 </a>
@@ -366,7 +371,7 @@
                 </div>
                 <div class="md:col-span-5 mt-stack-lg md:mt-0">
                     <img alt="Julio Cesar Cabral"
-                        class="w-full max-w-[360px] mx-auto h-[420px] md:h-[600px] object-cover object-center rounded-full md:grayscale md:hover:grayscale-0 transition-all duration-700"
+                        class="w-full max-w-[360px] mx-auto h-[420px] md:h-[600px] object-cover object-center rounded-full md:grayscale md:hover:grayscale-0 transition-all duration-700 zoomable-img cursor-pointer"
                         src="assets/photo.png">
                 </div>
             </div>
@@ -388,8 +393,10 @@
 
     <!-- Custom Cursor Element -->
     <div id="custom-cursor"
-        class="fixed top-0 left-0 w-4 h-4 bg-white rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out hidden md:block"
-        style="mix-blend-mode: difference;"></div>
+        class="fixed top-0 left-0 w-4 h-4 bg-white text-black flex items-center justify-center font-bold text-2xl rounded-full pointer-events-none z-[10010] -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-out hidden md:flex"
+        style="mix-blend-mode: difference;">
+        <span id="cursor-icon" class="opacity-0 transition-opacity duration-150 mt-[-2px]"></span>
+    </div>
 
     <script>
         const cursor = document.getElementById('custom-cursor');
@@ -399,18 +406,47 @@
             window.addEventListener('mousemove', (e) => {
                 cursor.style.left = e.clientX + 'px';
                 cursor.style.top = e.clientY + 'px';
+
+                const modal = document.getElementById('image-modal');
+                const cursorIcon = document.getElementById('cursor-icon');
+                if (modal && !modal.classList.contains('hidden')) {
+                    cursor.classList.remove('w-4', 'h-4');
+                    cursor.classList.add('w-12', 'h-12');
+                    if (cursorIcon) {
+                        cursorIcon.textContent = '-';
+                        cursorIcon.classList.remove('opacity-0');
+                    }
+                }
             });
 
             // Handle hover scaling on links, buttons, and logos
-            const interactives = document.querySelectorAll('a, button, img, [role="button"]');
+            const interactives = document.querySelectorAll('a, button, [role="button"], #image-modal, img.zoomable-img');
+            const cursorIcon = document.getElementById('cursor-icon');
+
             interactives.forEach(el => {
                 el.addEventListener('mouseenter', () => {
                     cursor.classList.remove('w-4', 'h-4');
                     cursor.classList.add('w-12', 'h-12');
+
+                    if (cursorIcon) {
+                        if (el.id === 'image-modal' || el.id === 'modal-img') {
+                            cursorIcon.textContent = '-';
+                            cursorIcon.classList.remove('opacity-0');
+                        } else if (el.tagName === 'IMG' && el.classList.contains('zoomable-img')) {
+                            cursorIcon.textContent = '+';
+                            cursorIcon.classList.remove('opacity-0');
+                        }
+                    }
                 });
                 el.addEventListener('mouseleave', () => {
+                    const modal = document.getElementById('image-modal');
+                    if (modal && !modal.classList.contains('hidden')) return;
+
                     cursor.classList.remove('w-12', 'h-12');
                     cursor.classList.add('w-4', 'h-4');
+                    if (cursorIcon) {
+                        cursorIcon.classList.add('opacity-0');
+                    }
                 });
             });
 
@@ -422,6 +458,71 @@
                 cursor.style.opacity = '1';
             });
         }
+    </script>
+
+    <!-- Image Modal Overlay -->
+    <div id="image-modal"
+        class="fixed inset-0 z-[10000] bg-[#131313]/95 hidden flex justify-center items-center opacity-0 transition-opacity duration-300 backdrop-blur-sm cursor-pointer">
+        <img id="modal-img" class="max-w-[90%] max-h-[90vh] object-contain rounded-xl shadow-2xl cursor-pointer" src=""
+            alt="Expanded image" />
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+
+            // Select only zoomable images
+            const images = document.querySelectorAll('img.zoomable-img');
+
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    modalImg.src = img.src;
+                    modal.classList.remove('hidden');
+
+                    const cursorIcon = document.getElementById('cursor-icon');
+                    if (cursorIcon) {
+                        cursorIcon.textContent = '-';
+                        cursorIcon.classList.remove('opacity-0');
+                    }
+
+                    // Small delay to allow display:block to apply before animating opacity
+                    setTimeout(() => {
+                        modal.classList.remove('opacity-0');
+                        modal.classList.add('opacity-100');
+                    }, 10);
+                });
+            });
+
+            const closeModal = () => {
+                modal.classList.remove('opacity-100');
+                modal.classList.add('opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modalImg.src = '';
+
+                    const cursorIcon = document.getElementById('cursor-icon');
+                    if (cursorIcon) {
+                        cursorIcon.classList.add('opacity-0');
+                        cursor.classList.remove('w-12', 'h-12');
+                        cursor.classList.add('w-4', 'h-4');
+                    }
+                }, 300);
+            };
+
+            if (modal) {
+                modal.addEventListener('click', () => {
+                    closeModal();
+                });
+            }
+
+            // Close on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+                    closeModal();
+                }
+            });
+        });
     </script>
 </body>
 
