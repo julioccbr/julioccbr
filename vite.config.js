@@ -10,6 +10,8 @@ export default defineConfig({
         paguemenos: resolve(__dirname, 'pague-menos-clube.html'),
         ifood: resolve(__dirname, 'ifood-utilities.html'),
         superagents: resolve(__dirname, 'superagents.html'),
+        eloexcel: resolve(__dirname, 'elo-excel-plugin.html'),
+        decolar: resolve(__dirname, 'decolar-travel-assistant.html'),
       },
     },
   },
